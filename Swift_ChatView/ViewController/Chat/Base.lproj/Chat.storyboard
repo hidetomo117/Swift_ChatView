@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jg4-6l-Ua5">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,76 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="E3L-fy-rpW">
+            <objects>
+                <navigationController id="Jg4-6l-Ua5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UD2-tm-WXl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cI9-ZW-9iK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnX-Q2-k93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159" y="21"/>
+        </scene>
+        <!--ChatViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ChatViewController" customModule="Swift_ChatView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" title="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ChatViewController" customModule="Swift_ChatView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dzw-tc-zxJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VU-tR-SKE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Erl-Tp-JwB">
+                                        <rect key="frame" x="8" y="734" width="406" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jdn-9z-Kyj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Erl-Tp-JwB" secondAttribute="bottom" id="4Mi-sk-9iq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Erl-Tp-JwB" secondAttribute="trailing" id="6pb-pH-Jce"/>
+                                    <constraint firstAttribute="trailing" secondItem="6VU-tR-SKE" secondAttribute="trailing" id="Nat-1v-oal"/>
+                                    <constraint firstItem="6VU-tR-SKE" firstAttribute="top" secondItem="Dzw-tc-zxJ" secondAttribute="top" id="OZK-LI-wua"/>
+                                    <constraint firstItem="Erl-Tp-JwB" firstAttribute="top" secondItem="6VU-tR-SKE" secondAttribute="bottom" id="ZxF-O2-7Qc"/>
+                                    <constraint firstItem="6VU-tR-SKE" firstAttribute="leading" secondItem="Dzw-tc-zxJ" secondAttribute="leading" id="fsh-Kz-wax"/>
+                                    <constraint firstItem="Erl-Tp-JwB" firstAttribute="leading" secondItem="Dzw-tc-zxJ" secondAttribute="leading" constant="8" id="ylF-kB-bBX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dzw-tc-zxJ" secondAttribute="bottom" id="92D-re-dMz"/>
+                            <constraint firstItem="Dzw-tc-zxJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SIN-pC-8to"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dzw-tc-zxJ" secondAttribute="trailing" id="cGH-44-SCv"/>
+                            <constraint firstItem="Dzw-tc-zxJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="drU-gL-o7p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="M8X-nz-FeI"/>
+                    <connections>
+                        <outlet property="baseView" destination="Dzw-tc-zxJ" id="6pp-4k-4oN"/>
+                        <outlet property="chatView" destination="6VU-tR-SKE" id="vRj-gq-j7n"/>
+                        <outlet property="contentInputView" destination="Erl-Tp-JwB" id="MVI-Yy-ArX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="666.66666666666674" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>
