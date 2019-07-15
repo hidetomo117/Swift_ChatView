@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		566D6E6222DC5CB700DC13BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D6E6122DC5CB700DC13BB /* AppDelegate.swift */; };
-		566D6E6422DC5CB700DC13BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D6E6322DC5CB700DC13BB /* ViewController.swift */; };
-		566D6E6722DC5CB700DC13BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566D6E6522DC5CB700DC13BB /* Main.storyboard */; };
+		566D6E6422DC5CB700DC13BB /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D6E6322DC5CB700DC13BB /* ChatViewController.swift */; };
+		566D6E6722DC5CB700DC13BB /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566D6E6522DC5CB700DC13BB /* Chat.storyboard */; };
 		566D6E6922DC5CB800DC13BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566D6E6822DC5CB800DC13BB /* Assets.xcassets */; };
 		566D6E6C22DC5CB800DC13BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566D6E6A22DC5CB800DC13BB /* LaunchScreen.storyboard */; };
 		566D6E7722DC5CB800DC13BB /* Swift_ChatViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566D6E7622DC5CB800DC13BB /* Swift_ChatViewTests.swift */; };
@@ -36,8 +36,8 @@
 /* Begin PBXFileReference section */
 		566D6E5E22DC5CB700DC13BB /* Swift_ChatView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_ChatView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566D6E6122DC5CB700DC13BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		566D6E6322DC5CB700DC13BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		566D6E6622DC5CB700DC13BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		566D6E6322DC5CB700DC13BB /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		566D6E6622DC5CB700DC13BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chat.storyboard; sourceTree = "<group>"; };
 		566D6E6822DC5CB800DC13BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		566D6E6B22DC5CB800DC13BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		566D6E6D22DC5CB800DC13BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,12 +97,8 @@
 		566D6E6022DC5CB700DC13BB /* Swift_ChatView */ = {
 			isa = PBXGroup;
 			children = (
-				566D6E6122DC5CB700DC13BB /* AppDelegate.swift */,
-				566D6E6322DC5CB700DC13BB /* ViewController.swift */,
-				566D6E6522DC5CB700DC13BB /* Main.storyboard */,
-				566D6E6822DC5CB800DC13BB /* Assets.xcassets */,
-				566D6E6A22DC5CB800DC13BB /* LaunchScreen.storyboard */,
-				566D6E6D22DC5CB800DC13BB /* Info.plist */,
+				566D6E9022DC5D6B00DC13BB /* ViewController */,
+				566D6E8F22DC5D4F00DC13BB /* Other */,
 			);
 			path = Swift_ChatView;
 			sourceTree = "<group>";
@@ -123,6 +119,42 @@
 				566D6E8322DC5CB800DC13BB /* Info.plist */,
 			);
 			path = Swift_ChatViewUITests;
+			sourceTree = "<group>";
+		};
+		566D6E8F22DC5D4F00DC13BB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				566D6E6D22DC5CB800DC13BB /* Info.plist */,
+				566D6E6822DC5CB800DC13BB /* Assets.xcassets */,
+				566D6E6122DC5CB700DC13BB /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		566D6E9022DC5D6B00DC13BB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				566D6E9222DC5D8400DC13BB /* Chat */,
+				566D6E9122DC5D7B00DC13BB /* Launch */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		566D6E9122DC5D7B00DC13BB /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				566D6E6A22DC5CB800DC13BB /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		566D6E9222DC5D8400DC13BB /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				566D6E6322DC5CB700DC13BB /* ChatViewController.swift */,
+				566D6E6522DC5CB700DC13BB /* Chat.storyboard */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +263,7 @@
 			files = (
 				566D6E6C22DC5CB800DC13BB /* LaunchScreen.storyboard in Resources */,
 				566D6E6922DC5CB800DC13BB /* Assets.xcassets in Resources */,
-				566D6E6722DC5CB700DC13BB /* Main.storyboard in Resources */,
+				566D6E6722DC5CB700DC13BB /* Chat.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566D6E6422DC5CB700DC13BB /* ViewController.swift in Sources */,
+				566D6E6422DC5CB700DC13BB /* ChatViewController.swift in Sources */,
 				566D6E6222DC5CB700DC13BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,12 +325,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		566D6E6522DC5CB700DC13BB /* Main.storyboard */ = {
+		566D6E6522DC5CB700DC13BB /* Chat.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				566D6E6622DC5CB700DC13BB /* Base */,
 			);
-			name = Main.storyboard;
+			name = Chat.storyboard;
 			sourceTree = "<group>";
 		};
 		566D6E6A22DC5CB800DC13BB /* LaunchScreen.storyboard */ = {
@@ -434,7 +466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9LY3B67W33;
-				INFOPLIST_FILE = Swift_ChatView/Info.plist;
+				INFOPLIST_FILE = Swift_ChatView/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9LY3B67W33;
-				INFOPLIST_FILE = Swift_ChatView/Info.plist;
+				INFOPLIST_FILE = Swift_ChatView/Other/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
